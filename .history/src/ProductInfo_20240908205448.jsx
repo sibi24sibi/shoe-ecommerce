@@ -29,7 +29,7 @@ function ProductInfo() {
           className=" mx-auto md:mx-0 w-10/12  aspect-auto"
         />
       </div>
-      <div className="  space-y-3 mx-8 md:mx-0 m-5">
+      <div className="  space-y-3 mx-8 md:mx-0">
         <h1 className=" text-xl md:text-5xl uppercase font-bold ">
           {productShoesData.name}
         </h1>
@@ -43,7 +43,7 @@ function ProductInfo() {
           Add to Cart
         </button>
 
-        <ul className=" text-xs space-y-3 py-6 spa ">
+        <ul className=" space-y-3 py-6 ">
           <li>
             <FontAwesomeIcon className="mx-3" icon={faShoePrints} /> Free
             Delivery, Free Returns

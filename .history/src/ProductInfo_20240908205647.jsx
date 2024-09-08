@@ -43,7 +43,7 @@ function ProductInfo() {
           Add to Cart
         </button>
 
-        <ul className=" text-xs space-y-3 py-6 spa ">
+        <ul className=" text-sm space-y-3 py-6 ">
           <li>
             <FontAwesomeIcon className="mx-3" icon={faShoePrints} /> Free
             Delivery, Free Returns

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
 function NavBar() {
   return (
-    <div className="mb-8">
+    <div className="my-5">
       <nav class="bg-white border-gray-200 dark:bg-gray-900  ">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
           <a

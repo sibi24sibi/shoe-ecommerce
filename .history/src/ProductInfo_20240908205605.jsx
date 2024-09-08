@@ -34,7 +34,7 @@ function ProductInfo() {
           {productShoesData.name}
         </h1>
         <p> MRP in Indian currency:</p>
-        <p className=" text-2xl font-medium font-serif text-yellow-900">
+        <p className=" text-base font-medium font-serif text-yellow-900">
           {productShoesData.price}
         </p>
         <p>(Inclusive of tax)</p>
@@ -43,7 +43,7 @@ function ProductInfo() {
           Add to Cart
         </button>
 
-        <ul className=" text-xs space-y-3 py-6 spa ">
+        <ul className=" space-y-3 py-6 ">
           <li>
             <FontAwesomeIcon className="mx-3" icon={faShoePrints} /> Free
             Delivery, Free Returns
