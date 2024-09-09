@@ -79,7 +79,7 @@ function ProductInfo() {
           </div>
 
           {/* Product Information Table */}
-          <div className="mt-6 md:overflow-x-auto overflow-x-scroll ">
+          <div className="mt-6 ">
             <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
               <thead>
                 <tr>

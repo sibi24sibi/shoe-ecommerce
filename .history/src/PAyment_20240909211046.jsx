@@ -20,7 +20,7 @@ function Payment() {
   };
 
   return (
-    <div className=" min-h-[75vh] p-8 bg-gray-100 dark:bg-gray-900 flex justify-center items-center">
+    <div className=" min-h-svh p-8 bg-gray-100 dark:bg-gray-900 flex justify-center items-center">
       <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-96">
         <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
           Enter Your Details

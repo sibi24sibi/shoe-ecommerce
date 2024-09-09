@@ -39,7 +39,7 @@ function ProductInfo() {
         />
       </div>
       {/* Product Details */}
-      <div className=" md:w-1/2 space-y-3 mx-8 md:mx-0 m-5 text-gray-900 dark:text-gray-100">
+      <div className="w-full md:w-1/2 space-y-3 mx-8 md:mx-0 m-5 text-gray-900 dark:text-gray-100">
         <h1 className="text-xl md:text-5xl uppercase font-bold">
           {productShoesData.name}
         </h1>
@@ -79,8 +79,8 @@ function ProductInfo() {
           </div>
 
           {/* Product Information Table */}
-          <div className="mt-6 md:overflow-x-auto overflow-x-scroll ">
-            <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+          <div className="mt-6  ">
+            <table className="  min-w-full divide-y divide-gray-200 dark:divide-gray-700">
               <thead>
                 <tr>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
@@ -96,12 +96,12 @@ function ProductInfo() {
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">
                     Brand
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">
+                  <td className="px-6 py-4 whitespace-nowrap  text-sm text-gray-500 dark:text-gray-300">
                     {productShoesData.brand}
                   </td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">
+                  <td className="px-6 py-4  md:whitespace-wrap text-sm font-medium text-gray-900 dark:text-gray-100">
                     Rating
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">
@@ -110,10 +110,10 @@ function ProductInfo() {
                   </td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">
+                  <td className="px-6 py-4  text-sm font-medium text-gray-900 dark:text-gray-100">
                     Description
                   </td>
-                  <td className="px-6 py-4 whitespace-wrap text-sm text-gray-500 dark:text-gray-300">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">
                     {productShoesData.description}
                   </td>
                 </tr>

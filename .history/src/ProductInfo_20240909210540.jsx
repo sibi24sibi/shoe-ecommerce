@@ -39,7 +39,7 @@ function ProductInfo() {
         />
       </div>
       {/* Product Details */}
-      <div className=" md:w-1/2 space-y-3 mx-8 md:mx-0 m-5 text-gray-900 dark:text-gray-100">
+      <div className="w-full md:w-1/2 space-y-3 mx-8 md:mx-0 m-5 text-gray-900 dark:text-gray-100">
         <h1 className="text-xl md:text-5xl uppercase font-bold">
           {productShoesData.name}
         </h1>
@@ -79,7 +79,7 @@ function ProductInfo() {
           </div>
 
           {/* Product Information Table */}
-          <div className="mt-6 md:overflow-x-auto overflow-x-scroll ">
+          <div className="mt-6 ">
             <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
               <thead>
                 <tr>

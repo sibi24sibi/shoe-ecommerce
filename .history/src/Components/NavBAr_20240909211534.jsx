@@ -75,20 +75,13 @@ function NavBar() {
             </NavLink>
 
             {/* Theme Toggle Button */}
-            <button
-              onClick={toggleTheme}
-              className="relative flex items-center justify-center p-2 bg-gray-200 dark:bg-gray-800 rounded-full shadow-md hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
-            >
-              <FontAwesomeIcon
-                icon={darkTheme ? faSun : faMoon}
-                className="text-xl text-gray-700 dark:text-gray-300"
-              />
-              <span className="absolute inset-0 rounded-full border-2 border-gray-300 dark:border-gray-600"></span>
+            <button onClick={toggleTheme} className="text-sm dark:text-white">
+              <FontAwesomeIcon icon={darkTheme ? faSun : faMoon} />
             </button>
 
             {/* User Account Icon */}
             <NavLink
-              to="/ "
+              to="/account"
               className="text-sm text-gray-500 dark:text-white hover:underline"
             >
               <FontAwesomeIcon icon={faUser} className="text-lg" />

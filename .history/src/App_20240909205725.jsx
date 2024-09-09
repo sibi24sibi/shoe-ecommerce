@@ -16,7 +16,7 @@ function App() {
       <div className="bg-slate-50 dark:bg-slate-950">
         <ToastContainer />
         <NavBar />
-        <div className="  mx-auto md:max-w-screen-xl  max-w-screen-sm ">
+        <div className="  mx-auto md:max-w-screen-xl  max-w-sm ">
           <Routes>
             <Route path="/" element={<Prodpage />} />
             <Route
