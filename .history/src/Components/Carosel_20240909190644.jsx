@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { assets } from "../assets/assets";
+import React, { useState } from "react";
 
 const slides = [
   {
-    imgSrc: assets.Carosel1,
+    imgSrc:
+      "https://penguinui.s3.amazonaws.com/component-assets/carousel/default-slide-1.webp",
     imgAlt:
       "Vibrant abstract painting with swirling blue and light pink hues on a canvas.",
   },
   {
-    imgSrc: assets.Carosel2,
+    imgSrc:
+      "https://penguinui.s3.amazonaws.com/component-assets/carousel/default-slide-2.webp",
     imgAlt:
       "Vibrant abstract painting with swirling red, yellow, and pink hues on a canvas.",
   },
   {
-    imgSrc: assets.Carosel3,
+    imgSrc:
+      "https://penguinui.s3.amazonaws.com/component-assets/carousel/default-slide-3.webp",
     imgAlt:
       "Vibrant abstract painting with swirling blue and purple hues on a canvas.",
   },
@@ -22,25 +24,13 @@ const slides = [
 function Carousel() {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(1);
 
-  // Function to move to the previous slide
   const previous = () => {
     setCurrentSlideIndex((prev) => (prev > 1 ? prev - 1 : slides.length));
   };
 
-  // Function to move to the next slide
   const next = () => {
     setCurrentSlideIndex((prev) => (prev < slides.length ? prev + 1 : 1));
   };
-
-  // Use effect to set up auto-transition
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      next();
-    }, 5000); // Change slide every 5 seconds
-
-    // Clear the interval on component unmount
-    return () => clearInterval(intervalId);
-  }, []);
 
   return (
     <div className="relative w-full overflow-hidden">

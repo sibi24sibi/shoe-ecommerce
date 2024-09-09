@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { assets } from "../assets/assets";
+import { Carousel } from 'flowbite-react';
 
 const slides = [
   {
-    imgSrc: assets.Carosel1,
+    imgSrc:
+      {assets.Carousel1},
     imgAlt:
       "Vibrant abstract painting with swirling blue and light pink hues on a canvas.",
   },
   {
-    imgSrc: assets.Carosel2,
+    imgSrc:
+      "https://penguinui.s3.amazonaws.com/component-assets/carousel/default-slide-2.webp",
     imgAlt:
       "Vibrant abstract painting with swirling red, yellow, and pink hues on a canvas.",
   },
   {
-    imgSrc: assets.Carosel3,
+    imgSrc:
+      "https://penguinui.s3.amazonaws.com/component-assets/carousel/default-slide-3.webp",
     imgAlt:
       "Vibrant abstract painting with swirling blue and purple hues on a canvas.",
   },

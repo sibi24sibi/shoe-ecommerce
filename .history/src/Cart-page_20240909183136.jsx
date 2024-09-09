@@ -7,7 +7,6 @@ import {
   faPlus,
   faMinus,
 } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
 
 function Cartpage() {
   const {
@@ -18,7 +17,6 @@ function Cartpage() {
     deleteItem,
   } = useContext(ShopContext);
 
-  const navigate = useNavigate();
   const packageFees = 50;
 
   const calculateTotal = () => {
@@ -30,16 +28,10 @@ function Cartpage() {
         );
         if (product) {
           total += cartItems[itemId][size] * product.price;
-        } else {
-          console.warn(`Product with ID ${itemId} not found`);
         }
       }
     }
     return total + packageFees;
-  };
-
-  const handleProceedToPay = () => {
-    navigate("/payment");
   };
 
   return (
@@ -142,12 +134,6 @@ function Cartpage() {
               <span>Grand Total:</span>
               <span>₹{calculateTotal()}</span>
             </div>
-            <button
-              onClick={handleProceedToPay}
-              className="mt-6 w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-500"
-            >
-              Proceed to Pay
-            </button>
           </div>
         </div>
       ) : (

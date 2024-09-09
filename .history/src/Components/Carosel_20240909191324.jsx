@@ -8,12 +8,12 @@ const slides = [
       "Vibrant abstract painting with swirling blue and light pink hues on a canvas.",
   },
   {
-    imgSrc: assets.Carosel2,
+    imgSrc: assets.Carosel1,
     imgAlt:
       "Vibrant abstract painting with swirling red, yellow, and pink hues on a canvas.",
   },
   {
-    imgSrc: assets.Carosel3,
+    imgSrc: assets.Carosel1,
     imgAlt:
       "Vibrant abstract painting with swirling blue and purple hues on a canvas.",
   },
