@@ -18,7 +18,7 @@ const slides = [
     imgSrc: assets.Carosel3,
     imgAlt:
       "Vibrant abstract painting with swirling blue and purple hues on a canvas.",
-    caption: "Can shipped to all location",
+    caption: "shipped to all location",
   },
 ];
 

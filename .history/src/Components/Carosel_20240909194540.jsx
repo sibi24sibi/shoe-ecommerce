@@ -6,19 +6,19 @@ const slides = [
     imgSrc: assets.Carosel1,
     imgAlt:
       "Vibrant abstract painting with swirling blue and light pink hues on a canvas.",
-    caption: "Daily New collection",
+    caption: "Caption for Slide 1",
   },
   {
     imgSrc: assets.Carosel2,
     imgAlt:
       "Vibrant abstract painting with swirling red, yellow, and pink hues on a canvas.",
-    caption: "at affordable price",
+    caption: "Caption for Slide 2",
   },
   {
     imgSrc: assets.Carosel3,
     imgAlt:
       "Vibrant abstract painting with swirling blue and purple hues on a canvas.",
-    caption: "Can shipped to all location",
+    caption: "Caption for Slide 3",
   },
 ];
 
@@ -109,10 +109,8 @@ function Carousel() {
               alt={slide.imgAlt}
               className="absolute w-full h-full object-cover"
             />
-            <div className="absolute bottom-0 left-0 w-full bg-gray-800 bg-opacity-50 text-white text-center pt-7 pb-12">
-              <h3 className=" text-3xl font-semibold uppercase">
-                {slide.caption}
-              </h3>
+            <div className="absolute bottom-0 left-0 w-full  text-white text-center py-12">
+              <h3 className=" text-2xl font-semibold">{slide.caption}</h3>
             </div>
           </div>
         ))}

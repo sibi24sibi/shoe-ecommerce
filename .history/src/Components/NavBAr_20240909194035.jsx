@@ -59,6 +59,12 @@ function NavBar() {
               </div>
             </NavLink>
 
+            <a
+              href="#"
+              className="text-sm text-blue-600 dark:text-blue-500 hover:underline"
+            >
+              Login
+            </a>
             {/* Button to toggle the theme with icon */}
             <button onClick={toggleTheme} className="text-sm dark:text-white">
               <FontAwesomeIcon icon={darkTheme ? faSun : faMoon} />
