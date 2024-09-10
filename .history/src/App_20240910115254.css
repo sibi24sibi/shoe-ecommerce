@@ -10,7 +10,7 @@
     .Toastify__toast-container {
       top: auto !important;
       bottom: 0 !important;
-     
+      margin: 5px 0px ;
     }
   }
   
