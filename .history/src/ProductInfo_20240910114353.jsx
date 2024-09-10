@@ -170,7 +170,7 @@ function ProductInfo() {
           </li>
           <li>
             <FontAwesomeIcon className="mx-3" icon={faClock} /> Delivery: Delhi,
-            Gurgaon: 1-2 Days.
+            Gurgaon: 1-2 Days,
           </li>
           <li>
             <FontAwesomeIcon className="mx-3" icon={faMoneyBillWave} /> COD
@@ -178,7 +178,7 @@ function ProductInfo() {
           </li>
           <li>
             <FontAwesomeIcon className="mx-3" icon={faShieldAlt} /> Secure
-            transactions with hassle-free Returns
+            transactions with hassle-free 14 days Exchange and Returns
           </li>
           <li>
             <FontAwesomeIcon className="mx-3" icon={faPercent} /> Save 5% on all

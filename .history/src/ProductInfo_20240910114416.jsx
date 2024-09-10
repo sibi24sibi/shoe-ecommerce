@@ -178,7 +178,7 @@ function ProductInfo() {
           </li>
           <li>
             <FontAwesomeIcon className="mx-3" icon={faShieldAlt} /> Secure
-            transactions with hassle-free Returns
+            transactions with hassle-free 1 Returns
           </li>
           <li>
             <FontAwesomeIcon className="mx-3" icon={faPercent} /> Save 5% on all
