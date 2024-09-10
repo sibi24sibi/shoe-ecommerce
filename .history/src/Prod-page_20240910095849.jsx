@@ -26,7 +26,7 @@ function Prodpage() {
             Flat 40% Off on Selected Products
           </p>
           <Link
-            to="/"
+            to="/shop"
             className="inline-block bg-white text-yellow-600 font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-gray-100 transition duration-300"
           >
             Shop Now

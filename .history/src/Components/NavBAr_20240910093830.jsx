@@ -59,7 +59,7 @@ function NavBar() {
                 className="absolute left-3 top-2.5 text-gray-500 dark:text-gray-400"
               />
             </div>
-
+            {/* Cart Icon with Count */}
             <NavLink
               to="/cart"
               className="text-sm text-gray-500 dark:text-white hover:underline relative"
@@ -74,18 +74,20 @@ function NavBar() {
               </div>
             </NavLink>
 
+            {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
-              className="relative inline-flex items-center p-1 bg-gray-200 dark:bg-gray-600 rounded-full w-12 h-6 transition-colors duration-300 focus:outline-none shadow-md"
+              className="relative inline-flex items-center p-1 bg-gray-200 dark:bg-gray-800 rounded-full w-12 h-6 transition-colors duration-300 focus:outline-none shadow-md"
             >
               <span
-                className={`absolute inline-block w-5 h-5 bg-white dark:bg-gray-300 rounded-full transition-transform transform ${
+                className={`absolute inline-block w-5 h-5 bg-white dark:bg-gray-600 rounded-full transition-transform transform ${
                   darkTheme ? "translate-x-6" : "translate-x-1"
                 }`}
               />
               <span className="sr-only">Toggle Theme</span>
             </button>
 
+            {/* User Account Icon */}
             <NavLink
               to="/ "
               className="text-sm text-gray-500 dark:text-white hover:underline"

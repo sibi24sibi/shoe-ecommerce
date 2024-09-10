@@ -6,7 +6,7 @@ const slides = [
     imgSrc: assets.Carosel1,
     imgAlt:
       "Vibrant abstract painting with swirling blue and light pink hues on a canvas.",
-    caption: "Shoes as Unique as You",
+    caption: "Great indian sale",
   },
   {
     imgSrc: assets.Carosel2,
@@ -18,7 +18,7 @@ const slides = [
     imgSrc: assets.Carosel3,
     imgAlt:
       "Vibrant abstract painting with swirling blue and purple hues on a canvas.",
-    caption: "Your Feet Deserve Luxury",
+    caption: "Can shipped to all location",
   },
 ];
 

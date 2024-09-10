@@ -10,29 +10,22 @@ function Prodpage() {
 
       {/* Banner Section */}
       <div className="relative bg-gradient-to-r from-yellow-400 to-yellow-600 text-center py-6 my-8 rounded-lg shadow-lg">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <svg
-            className="w-32 h-32 text-white opacity-20"
-            viewBox="0 0 100 100"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="50" cy="50" r="50" fill="currentColor" />
-          </svg>
-        </div>
-        <div className="relative z-10">
-          <p className="text-2xl font-bold text-white mb-4">Exclusive Offer!</p>
-          <p className="text-lg text-white mb-6">
-            Flat 40% Off on Selected Products
-          </p>
-          <Link
-            to="/"
-            className="inline-block bg-white text-yellow-600 font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-gray-100 transition duration-300"
-          >
-            Shop Now
-          </Link>
-        </div>
-      </div>
+  <div className="absolute inset-0 flex items-center justify-center">
+    <svg
+      className="w-32 h-32 text-white opacity-20"
+      viewBox="0 0 100 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="50" cy="50" r="50" fill="currentColor" />
+    </svg>
+  </div>
+  <div className="relative z-10">
+    <p className="text-2xl font-bold text-white mb-4">Exclusive Offer!</p>
+    <p className="text-lg text-white mb-6">Flat 40% Off on Selected Products</p>
+    <Link
+      t
+
 
       {/* Featured Products Heading */}
       <h2 className="text-3xl font-semibold text-center my-8">

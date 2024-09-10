@@ -16,12 +16,6 @@ import Carosel3 from "../assets/71qcoYgEhzL._SX3000_.jpg";
 
 export const assets = {
   Logo,
-  ADISIST_Slippers,
-  Solez_J83_Slippers,
-  solez_j81_slipper,
-  Opez_M_Green_Slipper,
-  opez_h9_black_slipper,
-  Adjustable_Bandage_Slides,
   Shoes_Gazelle_BlueShoes,
   Shoes_GazelleYellowShoes,
   Shoes_GazelleRedShoes,
@@ -289,7 +283,7 @@ export const productsdData = [
   },
   {
     _id: 11,
-    name: "Adilette Adjustable Bandage Slides",
+    name: "Adilette Comfort Adjustable Bandage Slides",
     image: assets.Adjustable_Bandage_Slides,
     price: 349,
     size: ["S", "M", "L", "XL"],

@@ -68,7 +68,7 @@ function Payment() {
 
         {paymentSuccess && (
           <div className="text-center mt-6 text-green-600 dark:text-green-400">
-            order placed
+            Payment Successful!
           </div>
         )}
       </div>

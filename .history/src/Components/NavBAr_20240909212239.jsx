@@ -33,7 +33,7 @@ function NavBar() {
   const { getCartCount } = useContext(ShopContext);
 
   return (
-    <div className="mb-8 sticky-top">
+    <div className="mb-8">
       {/* Top Navbar */}
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl p-4">
@@ -42,8 +42,8 @@ function NavBar() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img src={assets.Logo} className="h-8" alt="Shop Logo" />
-            <span className="self-center text-sm uppercase md:text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Nivakush Footware
+            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              {/* Shoe Market */}
             </span>
           </a>
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
@@ -59,7 +59,7 @@ function NavBar() {
                 className="absolute left-3 top-2.5 text-gray-500 dark:text-gray-400"
               />
             </div>
-
+            {/* Cart Icon with Count */}
             <NavLink
               to="/cart"
               className="text-sm text-gray-500 dark:text-white hover:underline relative"
@@ -74,18 +74,19 @@ function NavBar() {
               </div>
             </NavLink>
 
+            {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
-              className="relative inline-flex items-center p-1 bg-gray-200 dark:bg-gray-600 rounded-full w-12 h-6 transition-colors duration-300 focus:outline-none shadow-md"
+              className="relative flex items-center justify-center p-2 bg-gray-200 dark:bg-gray-800 rounded-full shadow-md hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
             >
-              <span
-                className={`absolute inline-block w-5 h-5 bg-white dark:bg-gray-300 rounded-full transition-transform transform ${
-                  darkTheme ? "translate-x-6" : "translate-x-1"
-                }`}
+              <FontAwesomeIcon
+                icon={darkTheme ? faSun : faMoon}
+                className="text-xl text-gray-700 dark:text-gray-300"
               />
-              <span className="sr-only">Toggle Theme</span>
+              <span className="absolute inset-0 rounded-full border-2 border-gray-300 dark:border-gray-600"></span>
             </button>
 
+            {/* User Account Icon */}
             <NavLink
               to="/ "
               className="text-sm text-gray-500 dark:text-white hover:underline"
@@ -111,7 +112,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/shop"
                 className="text-gray-900 dark:text-white hover:underline"
               >
                 Shop
@@ -119,7 +120,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/about"
                 className="text-gray-900 dark:text-white hover:underline"
               >
                 About Us
@@ -127,7 +128,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/contact"
                 className="text-gray-900 dark:text-white hover:underline"
               >
                 Contact

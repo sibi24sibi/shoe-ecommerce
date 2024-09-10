@@ -289,7 +289,7 @@ export const productsdData = [
   },
   {
     _id: 11,
-    name: "Adilette Adjustable Bandage Slides",
+    name: "Adilette Comfort Adjustable Bandage Slides",
     image: assets.Adjustable_Bandage_Slides,
     price: 349,
     size: ["S", "M", "L", "XL"],
