@@ -11,7 +11,6 @@ import Cartpage from "./Cart-page";
 import ProductInfo from "./ProductInfo";
 import About from "./Aboutus";
 import Pricing from "./Pricing";
-import Shop from "./Shop";
 
 function App() {
   return (
@@ -31,7 +30,6 @@ function App() {
             <Route path="/payment" element={<Payment />} />
             <Route path="/about" element={<About />} />
             <Route path="/pricing" element={<Pricing />} />
-            <Route path="/shop" element={<Shop />} />
           </Routes>
         </div>
         <Footer />

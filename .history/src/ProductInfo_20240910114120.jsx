@@ -35,7 +35,7 @@ function ProductInfo() {
         <img
           src={productShoesData.image}
           alt={productShoesData.name}
-          className="mx-auto md:mx-0 w-10/12 aspect-auto sticky  top-40 m-5"
+          className="mx-auto md:mx-0 w-10/12 aspect-auto sticky  top-32 m-5"
         />
       </div>
       {/* Product Details */}

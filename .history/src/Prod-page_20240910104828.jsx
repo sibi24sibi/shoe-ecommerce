@@ -16,8 +16,9 @@ function Prodpage() {
         "Explore the latest technology trends that are shaping the future of the industry in 2024.",
     },
     {
-      title: "Custom Fit for Character and Style",
-      description: "From kids to elder ones.",
+      title: "Top Gadgets to Watch",
+      description:
+        "Discover the top gadgets that are set to make waves in the tech world this year.",
     },
   ];
 

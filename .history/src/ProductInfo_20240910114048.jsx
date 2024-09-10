@@ -31,11 +31,11 @@ function ProductInfo() {
   return productShoesData ? (
     <div className="flex md:flex-row flex-col bg-white dark:bg-slate-950 transition duration-300">
       {/* Product Image */}
-      <div className=" md:w-1/2">
+      <div className=" md:w-1/2 ">
         <img
           src={productShoesData.image}
           alt={productShoesData.name}
-          className="mx-auto md:mx-0 w-10/12 aspect-auto sticky  top-40 m-5"
+          className="mx-auto md:mx-0 w-10/12 aspect-auto sticky top-16 m-5"
         />
       </div>
       {/* Product Details */}

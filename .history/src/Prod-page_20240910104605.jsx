@@ -4,23 +4,6 @@ import { productsdData } from "./assets/assets";
 import { Link } from "react-router-dom";
 
 function Prodpage() {
-  // Define data for the cards
-  const cardData = [
-    {
-      title: "Express Yourself from Sole to Soul",
-      description: "Be diffrent from others.",
-    },
-    {
-      title: "Innovative Tech Trends 2024",
-      description:
-        "Explore the latest technology trends that are shaping the future of the industry in 2024.",
-    },
-    {
-      title: "Custom Fit for Character and Style",
-      description: "From kids to elder ones.",
-    },
-  ];
-
   return (
     <div>
       <Carosel />
@@ -51,22 +34,19 @@ function Prodpage() {
         </div>
       </div>
 
-      {/* Dynamic Cards Section */}
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-4 m-8">
-        {cardData.map((card, index) => (
-          <a
-            key={index}
-            href="#"
-            className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-          >
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {card.title}
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              {card.description}
-            </p>
-          </a>
-        ))}
+      <div className=" grid md:grid-cols-3 grid-cols-1 gap-4 m-8">
+        <a
+          href="#"
+          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+        >
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Noteworthy technology acquisitions 2021
+          </h5>
+          <p class="font-normal text-gray-700 dark:text-gray-400">
+            Here are the biggest enterprise technology acquisitions of 2021 so
+            far, in reverse chronological order.
+          </p>
+        </a>
       </div>
 
       {/* Featured Products Heading */}

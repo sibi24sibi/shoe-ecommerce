@@ -7,8 +7,9 @@ function Prodpage() {
   // Define data for the cards
   const cardData = [
     {
-      title: "Express Yourself from Sole to Soul",
-      description: "Be diffrent from others.",
+      title: "Noteworthy technology acquisitions 2021",
+      description:
+        "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
     },
     {
       title: "Innovative Tech Trends 2024",
@@ -16,8 +17,9 @@ function Prodpage() {
         "Explore the latest technology trends that are shaping the future of the industry in 2024.",
     },
     {
-      title: "Custom Fit for Character and Style",
-      description: "From kids to elder ones.",
+      title: "Top Gadgets to Watch",
+      description:
+        "Discover the top gadgets that are set to make waves in the tech world this year.",
     },
   ];
 
