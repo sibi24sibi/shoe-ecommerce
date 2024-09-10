@@ -2,7 +2,7 @@ import React from "react";
 
 function Pricing() {
   return (
-    <div className=" py-10 flex items-center justify-center bg-gray-100  dark:bg-slate-950">
+    <div className=" flex items-center justify-center bg-gray-100  dark:bg-slate-950">
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {/* Basic Plan */}
         <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
