@@ -114,11 +114,11 @@ function AddProductForm() {
                   id={`size_${size}`}
                   value={size}
                   onChange={handleSizeChange}
-                  className="mr-2 dark:text-gray-100   text-gray-900"
+                  className="mr-2 dark:text-gray-100  text-gray-900"
                 />
                 <label
                   htmlFor={`size_${size}`}
-                  className="text-sm dark:text-gray-100 text-gray-900 "
+                  className="text-sm dark:text-gray-100 "
                 >
                   {size}
                 </label>

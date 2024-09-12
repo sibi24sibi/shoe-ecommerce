@@ -85,7 +85,7 @@ function AddProductForm() {
 
         <div className="relative z-0 w-full mb-5 group">
           <input
-            type="text"
+            type="number"
             name="price"
             id="price"
             className="block py-2.5  w-full text-sm dark:text-gray-100 px-2 text-gray-900 bg-transparent border-0 border-b-2 border-gray-300"
@@ -114,11 +114,11 @@ function AddProductForm() {
                   id={`size_${size}`}
                   value={size}
                   onChange={handleSizeChange}
-                  className="mr-2 dark:text-gray-100   text-gray-900"
+                  className="mr-2 dark:text-gray-100  text-gray-900"
                 />
                 <label
                   htmlFor={`size_${size}`}
-                  className="text-sm dark:text-gray-100 text-gray-900 "
+                  className="text-sm dark:text-gray-100 "
                 >
                   {size}
                 </label>
