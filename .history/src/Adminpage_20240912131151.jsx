@@ -85,7 +85,7 @@ function AddProductForm() {
 
         <div className="relative z-0 w-full mb-5 group">
           <input
-            type="number"
+            type="text"
             name="price"
             id="price"
             className="block py-2.5  w-full text-sm dark:text-gray-100 px-2 text-gray-900 bg-transparent border-0 border-b-2 border-gray-300"
