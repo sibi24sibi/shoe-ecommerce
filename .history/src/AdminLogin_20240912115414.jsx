@@ -35,10 +35,7 @@ function AdminLogin() {
 
   return (
     <div className="flex justify-center items-center h-screen ">
-      <form
-        className="max-w-sm w-full bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md m-8 p-12"
-        onSubmit={handleSubmit}
-      >
+      <form className="max-w-sm w-full bg-gray-100" onSubmit={handleSubmit}>
         <div className="mb-5">
           <label
             htmlFor="user"

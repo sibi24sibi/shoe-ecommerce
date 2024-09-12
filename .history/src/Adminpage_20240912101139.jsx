@@ -56,46 +56,48 @@ function AddProductForm() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50 dark:bg-gray-950 px-4 py-10">
-      <form
-        className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg p-6 w-full max-w-lg space-y-6"
-        onSubmit={handleSubmit}
-      >
-        <h2 className="text-2xl font-bold text-center mb-6 text-gray-900 dark:text-white">
-          Add New Product
-        </h2>
-
-        <div className="relative z-0 w-full mb-6 group">
+    <div className="flex justify-center items-center h-screen">
+      <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
+        <div className="relative z-0 w-full mb-5 group">
           <input
             type="text"
             name="product_name"
             id="product_name"
-            className="block py-3 px-4 w-full text-sm text-gray-900 dark:text-white bg-transparent border-2 border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
-            placeholder="Enter product name"
+            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300"
+            placeholder=" "
             value={productName}
             onChange={(e) => setProductName(e.target.value)}
             required
           />
+          <label
+            htmlFor="product_name"
+            className="absolute text-sm text-gray-500"
+          >
+            Product Name
+          </label>
         </div>
 
-        <div className="relative z-0 w-full mb-6 group">
+        <div className="relative z-0 w-full mb-5 group">
           <input
             type="number"
             name="price"
             id="price"
-            className="block py-3 px-4 w-full text-sm text-gray-900 dark:text-white bg-transparent border-2 border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
-            placeholder="Enter price"
+            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300"
+            placeholder=" "
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             required
           />
+          <label htmlFor="price" className="absolute text-sm text-gray-500">
+            Price
+          </label>
         </div>
 
-        <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-900 dark:text-gray-200 mb-2">
+        <div className="mb-5">
+          <label className="block text-sm font-medium text-gray-900 mb-2">
             Select Sizes
           </label>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex gap-4">
             {["8", "9", "10", "11"].map((size) => (
               <div key={size} className="flex items-center">
                 <input
@@ -103,12 +105,9 @@ function AddProductForm() {
                   id={`size_${size}`}
                   value={size}
                   onChange={handleSizeChange}
-                  className="mr-2 text-blue-600 dark:text-blue-400"
+                  className="mr-2"
                 />
-                <label
-                  htmlFor={`size_${size}`}
-                  className="text-sm text-gray-900 dark:text-gray-200"
-                >
+                <label htmlFor={`size_${size}`} className="text-sm">
                   {size}
                 </label>
               </div>
@@ -116,21 +115,21 @@ function AddProductForm() {
           </div>
         </div>
 
-        <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-900 dark:text-gray-200 mb-2">
+        <div className="mb-5">
+          <label className="block text-sm font-medium text-gray-900 mb-2">
             Upload Image
           </label>
           <input
             type="file"
             accept="image/*"
             onChange={handleImageUpload}
-            className="absolute inset-0 opacity-0 w-full h-full cursor-pointer"
+            className="block w-full text-sm bg-gray-50 border border-gray-300"
           />
         </div>
 
         <button
           type="submit"
-          className="w-full py-3 text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 rounded-md text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+          className="text-white bg-blue-700 hover:bg-blue-800 px-5 py-2.5 rounded-lg"
         >
           Add Product
         </button>

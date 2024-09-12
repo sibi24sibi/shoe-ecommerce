@@ -106,7 +106,7 @@ function Carousel() {
               className="absolute w-full h-full object-cover"
             />
             <div className="absolute bottom-0 left-0 w-full bg-gray-800 bg-opacity-50 text-white text-center pt-7 pb-12">
-              <h3 className=" text-3xl carosel-caption font-semibold uppercase">
+              <h3 className=" text-3xl font-semibold uppercase">
                 {slide.caption}
               </h3>
             </div>

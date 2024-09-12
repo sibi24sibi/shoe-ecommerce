@@ -1,5 +1,5 @@
 // Payment.js
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Payment() {
@@ -14,8 +14,9 @@ function Payment() {
 
   const navigate = useNavigate();
 
+  // Handle navigation
   const handleBack = () => {
-    navigate(-1);
+    navigate(-1); // Go back to the previous page
   };
 
   return (

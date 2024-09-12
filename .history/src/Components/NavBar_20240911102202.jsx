@@ -13,8 +13,10 @@ import { assets } from "../assets/assets";
 import { ShopContext } from "../Context/ShopContext";
 
 function NavBar() {
+  // State to manage the dark theme
   const [darkTheme, setDarkTheme] = useState(false);
 
+  // Effect to apply/remove the 'dark' class on the html element
   useEffect(() => {
     if (darkTheme) {
       document.documentElement.classList.add("dark");
@@ -23,10 +25,12 @@ function NavBar() {
     }
   }, [darkTheme]);
 
+  // Toggle theme function
   const toggleTheme = () => {
     setDarkTheme((prevTheme) => !prevTheme);
   };
 
+  // Access cart count from context
   const { getCartCount } = useContext(ShopContext);
 
   return (

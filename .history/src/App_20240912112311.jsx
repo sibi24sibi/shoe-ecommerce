@@ -24,21 +24,22 @@ function App() {
 
         <NavBar />
         <div className="  mx-auto md:max-w-screen-xl  max-w-screen-sm ">
-          <ScrollToTop />
           <Routes>
-            <Route path="/" element={<Prodpage />} />
-            <Route
-              path="/productInfo/:productInfoId"
-              element={<ProductInfo />}
-            />
-            <Route path="/cart" element={<Cartpage />} />
+            <ScrollToTop>
+              <Route path="/" element={<Prodpage />} />
+              <Route
+                path="/productInfo/:productInfoId"
+                element={<ProductInfo />}
+              />
+              <Route path="/cart" element={<Cartpage />} />
 
-            <Route path="/payment" element={<Payment />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/login" element={<AdminLogin />} />
-            <Route path="/admin" element={<Admin />} />
+              <Route path="/payment" element={<Payment />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route path="/login" element={<AdminLogin />} />
+              <Route path="/admin" element={<Admin />} />
+            </ScrollToTop>
           </Routes>
         </div>
         <Footer />

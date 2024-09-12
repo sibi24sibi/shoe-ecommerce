@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&family=Unlock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+
 .sticky-top {
     position: -webkit-sticky;
     position: sticky;
@@ -9,10 +10,10 @@
 
 
 .carosel-caption {
-  font-family: "Unlock", serif;
-  font-weight: 100;
+  font-family: "Playwrite CU", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
   font-style: normal;
-  letter-spacing:2px;
 }
 
 @media (max-width: 768px) {

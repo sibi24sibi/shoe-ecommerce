@@ -24,8 +24,8 @@ function App() {
 
         <NavBar />
         <div className="  mx-auto md:max-w-screen-xl  max-w-screen-sm ">
-          <ScrollToTop />
           <Routes>
+            <ScrollToTop />
             <Route path="/" element={<Prodpage />} />
             <Route
               path="/productInfo/:productInfoId"
