@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import { ShopContext } from "./Context/ShopContext"; // Import the context
+import { ShopContext } from "./Context/ShopContext";
 
 function AddProductForm() {
-  const { addNewProduct } = useContext(ShopContext); // Get the addNewProduct function from context
+  const { addNewProduct } = useContext(ShopContext);
 
   const [productName, setProductName] = useState("");
   const [price, setPrice] = useState("");
@@ -52,58 +52,48 @@ function AddProductForm() {
       ],
     };
 
-    addNewProduct(newProduct); // Add the product to the context
+    addNewProduct(newProduct);
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center min-h-screen dark:bg-gray-950  px-4 py-10">
       <form
-        className="max-w-md  dark:bg-slate-800 bg-slate-100 p-12 mx-8  rounded-lg shadow-md "
+        className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg p-6 w-full max-w-lg space-y-6"
         onSubmit={handleSubmit}
       >
-        <h2 className="  text-slate-100 text-center text-3xl  font-bold mb-8">
-          ADD PRODUCT
-        </h2>
-        <div className="relative z-0 w-full mb-5 group">
+        <h2 className="text-2xl font-bold text-center mb-6">Add New Product</h2>
+
+        <div className="relative z-0 w-full mb-6 group">
           <input
             type="text"
             name="product_name"
             id="product_name"
-            className="block py-2.5  w-full text-sm dark:text-gray-100 px-2 text-gray-900 bg-transparent border-0 border-b-2 border-gray-300"
-            placeholder=" "
+            className="block py-3 px-4 w-full text-sm text-gray-900 bg-transparent border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter product name"
             value={productName}
             onChange={(e) => setProductName(e.target.value)}
             required
           />
-          <label
-            htmlFor="product_name"
-            className="absolute text-sm text-gray-500"
-          >
-            Product Name
-          </label>
         </div>
 
-        <div className="relative z-0 w-full mb-5 group">
+        <div className="relative z-0 w-full mb-6 group">
           <input
             type="number"
             name="price"
             id="price"
-            className="block py-2.5  w-full text-sm dark:text-gray-100 px-2 text-gray-900 bg-transparent border-0 border-b-2 border-gray-300"
-            placeholder=" "
+            className="block py-3 px-4 w-full text-sm text-gray-900 bg-transparent border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter price"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             required
           />
-          <label htmlFor="price" className="absolute text-sm text-gray-500">
-            Price
-          </label>
         </div>
 
-        <div className="mb-5">
-          <label className="block text-sm font-medium dark:text-gray-100  text-gray-900 mb-2">
+        <div className="mb-6">
+          <label className="block text-sm font-medium text-gray-900 mb-2">
             Select Sizes
           </label>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             {["8", "9", "10", "11"].map((size) => (
               <div key={size} className="flex items-center">
                 <input
@@ -113,10 +103,7 @@ function AddProductForm() {
                   onChange={handleSizeChange}
                   className="mr-2"
                 />
-                <label
-                  htmlFor={`size_${size}`}
-                  className="text-sm dark:text-gray-100 "
-                >
+                <label htmlFor={`size_${size}`} className="text-sm">
                   {size}
                 </label>
               </div>
@@ -124,21 +111,21 @@ function AddProductForm() {
           </div>
         </div>
 
-        <div className="mb-5">
-          <label className="block text-sm font-medium text-gray-900 mb-2 dark:text-gray-100 ">
+        <div className="mb-6">
+          <label className="block text-sm font-medium text-gray-900 mb-2">
             Upload Image
           </label>
           <input
             type="file"
             accept="image/*"
             onChange={handleImageUpload}
-            className="block w-full text-sm bg-gray-50 border border-gray-300"
+            className="absolute inset-0 opacity-0 w-full h-full cursor-pointer"
           />
         </div>
 
         <button
           type="submit"
-          className="text-white bg-blue-700 hover:bg-blue-800 px-5 py-2.5 rounded-lg"
+          className="w-full py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-md text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           Add Product
         </button>

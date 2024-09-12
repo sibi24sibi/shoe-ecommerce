@@ -57,13 +57,7 @@ function AddProductForm() {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <form
-        className="max-w-md  dark:bg-slate-800 bg-slate-100 p-12 mx-8  rounded-lg shadow-md "
-        onSubmit={handleSubmit}
-      >
-        <h2 className="  text-slate-100 text-center text-3xl  font-bold mb-8">
-          ADD PRODUCT
-        </h2>
+      <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
         <div className="relative z-0 w-full mb-5 group">
           <input
             type="text"
@@ -125,7 +119,7 @@ function AddProductForm() {
         </div>
 
         <div className="mb-5">
-          <label className="block text-sm font-medium text-gray-900 mb-2 dark:text-gray-100 ">
+          <label className="block text-sm font-medium text-gray-900 mb-2">
             Upload Image
           </label>
           <input

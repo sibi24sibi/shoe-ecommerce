@@ -57,19 +57,13 @@ function AddProductForm() {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <form
-        className="max-w-md  dark:bg-slate-800 bg-slate-100 p-12 mx-8  rounded-lg shadow-md "
-        onSubmit={handleSubmit}
-      >
-        <h2 className="  text-slate-100 text-center text-3xl  font-bold mb-8">
-          ADD PRODUCT
-        </h2>
+      <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
         <div className="relative z-0 w-full mb-5 group">
           <input
             type="text"
             name="product_name"
             id="product_name"
-            className="block py-2.5  w-full text-sm dark:text-gray-100 px-2 text-gray-900 bg-transparent border-0 border-b-2 border-gray-300"
+            className="block py-2.5  w-full text-sm dark:text-gray-100 px-4 text-gray-900 bg-transparent border-0 border-b-2 border-gray-300"
             placeholder=" "
             value={productName}
             onChange={(e) => setProductName(e.target.value)}
@@ -88,7 +82,7 @@ function AddProductForm() {
             type="number"
             name="price"
             id="price"
-            className="block py-2.5  w-full text-sm dark:text-gray-100 px-2 text-gray-900 bg-transparent border-0 border-b-2 border-gray-300"
+            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300"
             placeholder=" "
             value={price}
             onChange={(e) => setPrice(e.target.value)}
@@ -100,7 +94,7 @@ function AddProductForm() {
         </div>
 
         <div className="mb-5">
-          <label className="block text-sm font-medium dark:text-gray-100  text-gray-900 mb-2">
+          <label className="block text-sm font-medium text-gray-900 mb-2">
             Select Sizes
           </label>
           <div className="flex gap-4">
@@ -113,10 +107,7 @@ function AddProductForm() {
                   onChange={handleSizeChange}
                   className="mr-2"
                 />
-                <label
-                  htmlFor={`size_${size}`}
-                  className="text-sm dark:text-gray-100 "
-                >
+                <label htmlFor={`size_${size}`} className="text-sm">
                   {size}
                 </label>
               </div>
@@ -125,7 +116,7 @@ function AddProductForm() {
         </div>
 
         <div className="mb-5">
-          <label className="block text-sm font-medium text-gray-900 mb-2 dark:text-gray-100 ">
+          <label className="block text-sm font-medium text-gray-900 mb-2">
             Upload Image
           </label>
           <input

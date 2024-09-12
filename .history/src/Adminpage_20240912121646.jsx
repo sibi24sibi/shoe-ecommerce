@@ -58,12 +58,9 @@ function AddProductForm() {
   return (
     <div className="flex justify-center items-center h-screen">
       <form
-        className="max-w-md  dark:bg-slate-800 bg-slate-100 p-12 mx-8  rounded-lg shadow-md "
+        className="max-w-md mx-auto bg-slate-800 p-12 mx-8"
         onSubmit={handleSubmit}
       >
-        <h2 className="  text-slate-100 text-center text-3xl  font-bold mb-8">
-          ADD PRODUCT
-        </h2>
         <div className="relative z-0 w-full mb-5 group">
           <input
             type="text"
