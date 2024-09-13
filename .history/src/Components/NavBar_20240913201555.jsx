@@ -70,7 +70,7 @@ function NavBar() {
 
             <button
               onClick={toggleTheme}
-              className="relative inline-flex items-center  text-sm md:text-lg p-1 bg-blue-200 dark:bg-blue-300 rounded-full md:w-12 md:h-6 w-6   h-3 transition-colors duration-300 focus:outline-none shadow-md"
+              className="relative inline-flex items-center  text-sm md:text-lg p-1 bg-blue-200 dark:bg-gray-600 rounded-full md:w-12 md:h-6 w-6   h-3 transition-colors duration-300 focus:outline-none shadow-md"
             >
               <span
                 className={`absolute inline-block md:w-4 md:h-4 w-2 h-2  bg-blue-400 dark:bg-blue-500 rounded-full transition-transform transform ${

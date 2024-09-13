@@ -106,7 +106,7 @@ function Cartpage() {
                             <FontAwesomeIcon icon={faPlus} />
                           </button>
                         </div>
-                        <div className="ml-4 text-lg font-semibold md:text-lg  text-xs ">
+                        <div className="ml-4 text-lg font-semibold">
                           ₹{cartItems[itemId][size] * product.price}
                         </div>
                         <button
@@ -137,15 +137,15 @@ function Cartpage() {
             <div className="dark:bg-blue-600 bg-blue-200  text-black dark:text-white rounded-lg shadow-lg">
               <div className="p-6">
                 <h5 className="text-lg font-semibold mb-4">Order Summary</h5>
-                <div className="md:text-lg  text-base flex justify-between mb-4">
+                <div className="flex justify-between mb-4">
                   <p>Subtotal:</p>
                   <p>₹{calculateTotal() - packageFees}</p>
                 </div>
-                <div className=" md:text-lg  text-base flex justify-between mb-4">
+                <div className="flex justify-between mb-4">
                   <p>Package Fees:</p>
                   <p>₹{packageFees}</p>
                 </div>
-                <div className=" md:text-lg  text-base flex justify-between mb-6">
+                <div className="flex justify-between mb-6">
                   <p className="font-semibold">Total (Incl. Taxes):</p>
                   <p className="font-semibold">₹{calculateTotal()}</p>
                 </div>

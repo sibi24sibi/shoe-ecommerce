@@ -141,11 +141,11 @@ function Cartpage() {
                   <p>Subtotal:</p>
                   <p>₹{calculateTotal() - packageFees}</p>
                 </div>
-                <div className=" md:text-lg  text-base flex justify-between mb-4">
+                <div className="flex justify-between mb-4">
                   <p>Package Fees:</p>
                   <p>₹{packageFees}</p>
                 </div>
-                <div className=" md:text-lg  text-base flex justify-between mb-6">
+                <div className="flex justify-between mb-6">
                   <p className="font-semibold">Total (Incl. Taxes):</p>
                   <p className="font-semibold">₹{calculateTotal()}</p>
                 </div>

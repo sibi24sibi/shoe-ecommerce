@@ -44,8 +44,8 @@ function Cartpage() {
 
   return (
     <div className=" min-h-screen">
-      <section className="container md:mx-auto py-8 px-4">
-        <div className="flex  md:flex-row flex-col gap-4   justify-center">
+      <section className="container mx-auto py-8">
+        <div className="flex  md:flex-row flex-col  justify-center">
           <div className="w-full lg:w-2/3">
             <div className="bg-white dark:bg-slate-700 shadow-lg rounded-lg">
               <div className="p-6">
@@ -58,7 +58,7 @@ function Cartpage() {
                       Shopping Cart
                     </a>
                   </h5>
-                  <p className="text-gray-600 dark:text-gray-200">
+                  <p className="text-gray-600">
                     You have {Object.keys(cartItems).length} items in your cart
                   </p>
                 </div>
@@ -74,7 +74,7 @@ function Cartpage() {
                     return Object.keys(cartItems[itemId]).map((size) => (
                       <div
                         key={itemId + size}
-                        className="flex items-center mb-4 p-4 border-b text-gray-100 dark:text-gray-200 border-gray-300"
+                        className="flex items-center mb-4 p-4 border-b border-gray-300"
                       >
                         <img
                           src={product.image}
@@ -82,31 +82,29 @@ function Cartpage() {
                           className="w-16 h-16 object-cover rounded-md mr-4"
                         />
                         <div className="flex-grow">
-                          <h5 className="md:text-lg  text-xs  font-semibold">
+                          <h5 className="text-lg font-semibold">
                             {product.name}
                           </h5>
-                          <p className="text-gray-600 md:text-lg  text-xs  dark:text-gray-200">
-                            {size}
-                          </p>
+                          <p className="text-gray-600 text-sm">{size}</p>
                         </div>
                         <div className="flex items-center space-x-2">
                           <button
                             onClick={() => decrementQuantity(itemId, size)}
-                            className="px-2 py-1 bg-gray-300 md:text-lg  text-xs   text-gray-800 rounded-md hover:bg-gray-400"
+                            className="px-2 py-1 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400"
                           >
                             <FontAwesomeIcon icon={faMinus} />
                           </button>
-                          <span className="mx-2  md:text-lg  text-xs ">
+                          <span className="mx-2 text-lg">
                             {cartItems[itemId][size]}
                           </span>
                           <button
                             onClick={() => incrementQuantity(itemId, size)}
-                            className="px-2 py-1 md:text-lg  text-xs  bg-gray-300  text-gray-800 rounded-md hover:bg-gray-400"
+                            className="px-2 py-1 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400"
                           >
                             <FontAwesomeIcon icon={faPlus} />
                           </button>
                         </div>
-                        <div className="ml-4 text-lg font-semibold md:text-lg  text-xs ">
+                        <div className="ml-4 text-lg font-semibold">
                           ₹{cartItems[itemId][size] * product.price}
                         </div>
                         <button
@@ -119,13 +117,13 @@ function Cartpage() {
                     ));
                   })
                 ) : (
-                  <div className="text-center text-gray-600 dark:text-gray-200 py-16">
+                  <div className="text-center text-gray-600 py-16">
                     <h4 className="text-2xl font-medium mb-4">
                       Your Cart is Empty
                     </h4>
                     <FontAwesomeIcon
                       icon={faShoePrints}
-                      className="text-6xl text-gray-400 "
+                      className="text-6xl text-gray-400"
                     />
                   </div>
                 )}
@@ -137,15 +135,15 @@ function Cartpage() {
             <div className="dark:bg-blue-600 bg-blue-200  text-black dark:text-white rounded-lg shadow-lg">
               <div className="p-6">
                 <h5 className="text-lg font-semibold mb-4">Order Summary</h5>
-                <div className="md:text-lg  text-base flex justify-between mb-4">
+                <div className="flex justify-between mb-4">
                   <p>Subtotal:</p>
                   <p>₹{calculateTotal() - packageFees}</p>
                 </div>
-                <div className=" md:text-lg  text-base flex justify-between mb-4">
+                <div className="flex justify-between mb-4">
                   <p>Package Fees:</p>
                   <p>₹{packageFees}</p>
                 </div>
-                <div className=" md:text-lg  text-base flex justify-between mb-6">
+                <div className="flex justify-between mb-6">
                   <p className="font-semibold">Total (Incl. Taxes):</p>
                   <p className="font-semibold">₹{calculateTotal()}</p>
                 </div>

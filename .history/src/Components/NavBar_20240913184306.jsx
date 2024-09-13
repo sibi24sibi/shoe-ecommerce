@@ -70,10 +70,10 @@ function NavBar() {
 
             <button
               onClick={toggleTheme}
-              className="relative inline-flex items-center  text-sm md:text-lg p-1 bg-blue-200 dark:bg-blue-300 rounded-full md:w-12 md:h-6 w-6   h-3 transition-colors duration-300 focus:outline-none shadow-md"
+              className="relative inline-flex items-center  text-sm md:text-lg p-1 bg-gray-200 dark:bg-gray-600 rounded-full md:w-12 md:h-6 w-6   h-3 transition-colors duration-300 focus:outline-none shadow-md"
             >
               <span
-                className={`absolute inline-block md:w-4 md:h-4 w-2 h-2  bg-blue-400 dark:bg-blue-500 rounded-full transition-transform transform ${
+                className={`absolute inline-block md:w-4 md:h-4 w-2 h-2  bg-white dark:bg-gray-300 rounded-full transition-transform transform ${
                   darkTheme
                     ? "translate-x-3 md:translate-x-6"
                     : "translate-x-0 md:translate-x-1"
@@ -104,12 +104,12 @@ function NavBar() {
 
       {/* Bottom Navbar */}
       <nav className="bg-gray-50 dark:bg-gray-700 sticky top-0 z-50 py-3">
-        <div className="max-w-screen-xl px-4 py-3 mx-auto  text-base  ">
+        <div className="max-w-screen-xl px-4 py-3 mx-auto">
           <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
             <li>
               <NavLink
                 to="/"
-                className="text-gray-900 dark:text-white hover:underline  text-base font-semibold"
+                className="text-gray-900 dark:text-white hover:underline"
                 aria-current="page"
               >
                 Home
@@ -118,7 +118,7 @@ function NavBar() {
             <li>
               <NavLink
                 to="/shop"
-                className="text-gray-900 dark:text-white hover:underline  text-base font-semibold"
+                className="text-gray-900 dark:text-white hover:underline"
               >
                 Shop
               </NavLink>
@@ -126,7 +126,7 @@ function NavBar() {
             <li>
               <NavLink
                 to="/about"
-                className="text-gray-900 dark:text-white hover:underline  text-base font-semibold"
+                className="text-gray-900 dark:text-white hover:underline"
               >
                 About
               </NavLink>
@@ -134,7 +134,7 @@ function NavBar() {
             <li>
               <NavLink
                 to="/pricing"
-                className="text-gray-900 dark:text-white hover:underline  text-base font-semibold"
+                className="text-gray-900 dark:text-white hover:underline"
               >
                 Pricing
               </NavLink>

@@ -136,16 +136,18 @@ function Cartpage() {
           <div className="w-full lg:w-1/3 lg:ml-4">
             <div className="dark:bg-blue-600 bg-blue-200  text-black dark:text-white rounded-lg shadow-lg">
               <div className="p-6">
-                <h5 className="text-lg font-semibold mb-4">Order Summary</h5>
-                <div className="md:text-lg  text-base flex justify-between mb-4">
+                <h5 className="md:text-lg  text-xs  font-semibold mb-4">
+                  Order Summary
+                </h5>
+                <div className="flex justify-between mb-4">
                   <p>Subtotal:</p>
                   <p>₹{calculateTotal() - packageFees}</p>
                 </div>
-                <div className=" md:text-lg  text-base flex justify-between mb-4">
+                <div className="flex justify-between mb-4">
                   <p>Package Fees:</p>
                   <p>₹{packageFees}</p>
                 </div>
-                <div className=" md:text-lg  text-base flex justify-between mb-6">
+                <div className="flex justify-between mb-6">
                   <p className="font-semibold">Total (Incl. Taxes):</p>
                   <p className="font-semibold">₹{calculateTotal()}</p>
                 </div>
