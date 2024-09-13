@@ -47,7 +47,7 @@ function Cartpage() {
       <section className="container md:mx-auto py-8 px-4">
         <div className="flex  md:flex-row flex-col gap-4   justify-center">
           <div className="w-full lg:w-2/3">
-            <div className="bg-white dark:bg-slate-700  shadow-lg rounded-lg">
+            <div className="bg-white dark:bg-slate-700 text-gray-900 dark:text-gray-200 shadow-lg rounded-lg">
               <div className="p-6">
                 <div className="flex justify-between items-center mb-4">
                   <h5 className="text-lg font-semibold">
@@ -74,7 +74,7 @@ function Cartpage() {
                     return Object.keys(cartItems[itemId]).map((size) => (
                       <div
                         key={itemId + size}
-                        className="flex items-center mb-4 p-4 border-b text-gray-900 dark:text-gray-200 border-gray-300"
+                        className="flex items-center mb-4 p-4 border-b text-gray-100 dark:text-gray-200 border-gray-300"
                       >
                         <img
                           src={product.image}
