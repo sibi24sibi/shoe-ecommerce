@@ -4,11 +4,12 @@ import Carosel from "./Components/Carosel";
 import { ShopContext } from "./Context/ShopContext";
 import { Link } from "react-router-dom";
 import Banner from "./Banner";
-import ResponsivePagination from "react-responsive-pagination";
-import "react-responsive-pagination/themes/classic.css";
-import PaginationProdGrid from "./PaginationProdGrid";
+import ResponsivePagination from 'react-responsive-pagination';
+import 'react-responsive-pagination/themes/classic.css';
 
 function Prodpage() {
+  const { products } = useContext(ShopContext);
+
   const cardData = [
     {
       title: "Express Yourself from Sole to Soul",
@@ -37,7 +38,29 @@ function Prodpage() {
         <h2 className="text-3xl font-semibold text-center my-8">
           Featured Products
         </h2>
-        <PaginationProdGrid />
+
+        {/* Products Grid */}
+        <ResponsivePagination
+      current={currentPage}
+      total={totalPages}
+      onPageChange={setCurrentPage}
+    >
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-4 m-8">
+          {products && products.length > 0 ? (
+            products.map((item) => (
+              <Link key={item._id} to={`/productInfo/${item._id}`}>
+                <Products
+                  name={item.name}
+                  image={item.image}
+                  price={item.price}
+                />
+              </Link>
+            ))
+          ) : (
+            <p className="text-center">No products available</p>
+          )}
+        </div>
+        <ResponsivePagination />
       </div>
       {/* Quotes Cards Section */}
       <div className="grid grid-cols-3 gap-4 my-8 ">

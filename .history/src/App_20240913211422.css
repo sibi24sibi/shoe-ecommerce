@@ -24,6 +24,28 @@
   letter-spacing:2px;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px; /* Space between grid items */
+}
+
+.grid-item {
+  background-color: #f9f9f9; /* Background color for grid items */
+  border: 1px solid #ddd; /* Border for grid items */
+  padding: 16px; /* Padding inside grid items */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.pagination {
+  display: flex; /* Flexbox for pagination */
+  justify-content: center; /* Center pagination */
+  margin-top: 20px; /* Space above pagination */
+}
+
+.active {
+  font-weight: bold; /* Bold text for active page */
+}
 
 
 @media (max-width: 768px) {

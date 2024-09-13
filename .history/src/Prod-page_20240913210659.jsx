@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import Banner from "./Banner";
 import ResponsivePagination from "react-responsive-pagination";
 import "react-responsive-pagination/themes/classic.css";
-import PaginationProdGrid from "./PaginationProdGrid";
 
 function Prodpage() {
   const cardData = [
@@ -37,7 +36,6 @@ function Prodpage() {
         <h2 className="text-3xl font-semibold text-center my-8">
           Featured Products
         </h2>
-        <PaginationProdGrid />
       </div>
       {/* Quotes Cards Section */}
       <div className="grid grid-cols-3 gap-4 my-8 ">
