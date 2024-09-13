@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&family=Unlock&display=swap');
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+
+
+.carosel-caption {
+  font-family: "Unlock", serif;
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing:2px;
+}
+
+.remove-bg-style{
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 768px) {
+    .Toastify__toast-container {
+      top: auto !important;
+      bottom: 0 !important;
+     
+    }
+  }
+  
