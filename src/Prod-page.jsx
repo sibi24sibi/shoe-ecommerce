@@ -40,7 +40,7 @@ function Prodpage() {
         <PaginationProdGrid />
       </div>
       <div className="flex justify-center my-8">
-        <div className="grid grid-col-1 md:grid-cols-3 gap-4 w-full max-w-4xl px-4 md:px-0">
+        <div className="grid grid-col-1 md:grid-cols-3 gap-4 w-full max-w-4xl px-12 md:px-0">
           {cardData.map((card, index) => (
             <a
               key={index}
