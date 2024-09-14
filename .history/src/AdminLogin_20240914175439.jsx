@@ -39,7 +39,7 @@ function AdminLogin() {
         className="max-w-sm w-full bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md m-8 p-5"
         onSubmit={handleSubmit}
       >
-        <h3 className=" dark:text-slate-100 text-slate-900 uppercase  text-2xl font-semibold text-center">
+        <h3 className=" text-slate-100 dark:text-slate-900 uppercase  text-2xl font-semibold text-center">
           Login as Seller
         </h3>
         <div className="m-5">
