@@ -109,8 +109,8 @@ function NavBar() {
 
       {/* Bottom Navbar */}
       <nav className="bg-gray-50 dark:bg-gray-700 py-3">
-        <div className="w-fit px-4 mx-auto">
-          <ul className="flex justify-center space-x-6 text-xs md:text-sm font-medium">
+        <div className=" px-4 ">
+          <ul className="flex justify-center space-x-6 text-sm font-medium">
             <li>
               <NavLink
                 to="/"
