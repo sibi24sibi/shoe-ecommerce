@@ -1,7 +1,7 @@
-import { AiOutlineHome } from "react-icons/ai";
-import { AiFillShopping } from "react-icons/ai";
+import { IoPricetagOutline } from "react-icons/io";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-import { IoIosPricetags } from "react-icons/io";
+import { AiFillShopping } from "react-icons/ai";
+import { AiOutlineHome } from "react-icons/ai";
 import { useState, useEffect, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -116,14 +116,11 @@ function NavBar() {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-gray-900 dark:text-white border-b-4 flex border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                    : "text-gray-900 dark:text-white  hover:border-b-4 flex hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
+                    ? "text-gray-900 dark:text-white border-b-4 border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
+                    : "text-gray-900 dark:text-white  hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
                 }
                 aria-current="page"
               >
-                <span>
-                  <AiOutlineHome className="  mx-2 translate-y-[0.25rem]" />
-                </span>
                 Home
               </NavLink>
             </li>
@@ -132,11 +129,10 @@ function NavBar() {
                 to="/shop"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-gray-900 flex dark:text-white border-b-4 border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                    : "text-gray-900 flex dark:text-white hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
+                    ? "text-gray-900 dark:text-white border-b-4 border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
+                    : "text-gray-900 dark:text-white hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
                 }
               >
-                <AiFillShopping className="  mx-2 translate-y-[0.25rem]" />
                 Shop
               </NavLink>
             </li>
@@ -145,11 +141,10 @@ function NavBar() {
                 to="/about"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-gray-900 flex dark:text-white border-b-4 border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                    : "text-gray-900 flex dark:text-white  hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
+                    ? "text-gray-900 dark:text-white border-b-4 border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
+                    : "text-gray-900 dark:text-white  hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
                 }
               >
-                <AiOutlineInfoCircle className="  mx-2 translate-y-[0.25rem]" />
                 About
               </NavLink>
             </li>
@@ -158,11 +153,10 @@ function NavBar() {
                 to="/pricing"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-gray-900 flex dark:text-white border-b-4 border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                    : "text-gray-900 flex dark:text-white  hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
+                    ? "text-gray-900 dark:text-white border-b-4 border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
+                    : "text-gray-900 dark:text-white  hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
                 }
               >
-                <IoIosPricetags className="  mx-2 translate-y-[0.25rem]" />
                 Pricing
               </NavLink>
             </li>

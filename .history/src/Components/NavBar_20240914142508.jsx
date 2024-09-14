@@ -1,7 +1,3 @@
-import { AiOutlineHome } from "react-icons/ai";
-import { AiFillShopping } from "react-icons/ai";
-import { AiOutlineInfoCircle } from "react-icons/ai";
-import { IoIosPricetags } from "react-icons/io";
 import { useState, useEffect, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -116,14 +112,11 @@ function NavBar() {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-gray-900 dark:text-white border-b-4 flex border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                    : "text-gray-900 dark:text-white  hover:border-b-4 flex hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
+                    ? " "
+                    : "text-gray-900 dark:text-white hover:underline text-base font-semibold"
                 }
                 aria-current="page"
               >
-                <span>
-                  <AiOutlineHome className="  mx-2 translate-y-[0.25rem]" />
-                </span>
                 Home
               </NavLink>
             </li>
@@ -132,11 +125,10 @@ function NavBar() {
                 to="/shop"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-gray-900 flex dark:text-white border-b-4 border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                    : "text-gray-900 flex dark:text-white hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
+                    ? "text-blue-600 dark:text-blue-400 font-semibold underline"
+                    : "text-gray-900 dark:text-white hover:underline text-base font-semibold"
                 }
               >
-                <AiFillShopping className="  mx-2 translate-y-[0.25rem]" />
                 Shop
               </NavLink>
             </li>
@@ -145,11 +137,10 @@ function NavBar() {
                 to="/about"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-gray-900 flex dark:text-white border-b-4 border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                    : "text-gray-900 flex dark:text-white  hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
+                    ? "text-blue-600 dark:text-blue-400 font-semibold underline"
+                    : "text-gray-900 dark:text-white hover:underline text-base font-semibold"
                 }
               >
-                <AiOutlineInfoCircle className="  mx-2 translate-y-[0.25rem]" />
                 About
               </NavLink>
             </li>
@@ -158,11 +149,10 @@ function NavBar() {
                 to="/pricing"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-gray-900 flex dark:text-white border-b-4 border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                    : "text-gray-900 flex dark:text-white  hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
+                    ? "text-blue-600 dark:text-blue-400 font-semibold underline"
+                    : "text-gray-900 dark:text-white hover:underline text-base font-semibold"
                 }
               >
-                <IoIosPricetags className="  mx-2 translate-y-[0.25rem]" />
                 Pricing
               </NavLink>
             </li>

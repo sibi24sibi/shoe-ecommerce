@@ -122,7 +122,7 @@ function NavBar() {
                 aria-current="page"
               >
                 <span>
-                  <AiOutlineHome className="  mx-2 translate-y-[0.25rem]" />
+                  <AiOutlineHome className="  mx-2 translate-x-1" />
                 </span>
                 Home
               </NavLink>
@@ -136,7 +136,7 @@ function NavBar() {
                     : "text-gray-900 flex dark:text-white hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
                 }
               >
-                <AiFillShopping className="  mx-2 translate-y-[0.25rem]" />
+                <AiFillShopping />
                 Shop
               </NavLink>
             </li>
@@ -149,7 +149,7 @@ function NavBar() {
                     : "text-gray-900 flex dark:text-white  hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
                 }
               >
-                <AiOutlineInfoCircle className="  mx-2 translate-y-[0.25rem]" />
+                <AiOutlineInfoCircle />
                 About
               </NavLink>
             </li>
@@ -162,7 +162,7 @@ function NavBar() {
                     : "text-gray-900 flex dark:text-white  hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
                 }
               >
-                <IoIosPricetags className="  mx-2 translate-y-[0.25rem]" />
+                <IoIosPricetags />
                 Pricing
               </NavLink>
             </li>

@@ -1,7 +1,3 @@
-import { AiOutlineHome } from "react-icons/ai";
-import { AiFillShopping } from "react-icons/ai";
-import { AiOutlineInfoCircle } from "react-icons/ai";
-import { IoIosPricetags } from "react-icons/io";
 import { useState, useEffect, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -109,60 +105,38 @@ function NavBar() {
 
       {/* Bottom Navbar */}
       <nav className="bg-gray-50 dark:bg-gray-700 sticky top-0 z-50 py-3">
-        <div className="max-w-screen-xl px-4 mx-auto">
-          <ul className="flex justify-center space-x-6 text-sm font-medium">
+        <div className="max-w-screen-xl px-4 py-3 mx-auto  text-base  ">
+          <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
             <li>
               <NavLink
                 to="/"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-gray-900 dark:text-white border-b-4 flex border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                    : "text-gray-900 dark:text-white  hover:border-b-4 flex hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                }
+                className="text-gray-900 dark:text-white hover:underline  text-base font-semibold"
                 aria-current="page"
               >
-                <span>
-                  <AiOutlineHome className="  mx-2 translate-y-[0.25rem]" />
-                </span>
                 Home
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/shop"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-gray-900 flex dark:text-white border-b-4 border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                    : "text-gray-900 flex dark:text-white hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                }
+                className="text-gray-900 dark:text-white hover:underline  text-base font-semibold"
               >
-                <AiFillShopping className="  mx-2 translate-y-[0.25rem]" />
                 Shop
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/about"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-gray-900 flex dark:text-white border-b-4 border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                    : "text-gray-900 flex dark:text-white  hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                }
+                className="text-gray-900 dark:text-white hover:underline  text-base font-semibold"
               >
-                <AiOutlineInfoCircle className="  mx-2 translate-y-[0.25rem]" />
                 About
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/pricing"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-gray-900 flex dark:text-white border-b-4 border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                    : "text-gray-900 flex dark:text-white  hover:border-b-4 hover:border-indigo-500 pb-1 transition-all duration-300 ease-in-out"
-                }
+                className="text-gray-900 dark:text-white hover:underline  text-base font-semibold"
               >
-                <IoIosPricetags className="  mx-2 translate-y-[0.25rem]" />
                 Pricing
               </NavLink>
             </li>
