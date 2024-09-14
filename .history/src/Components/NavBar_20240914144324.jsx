@@ -108,7 +108,7 @@ function NavBar() {
       </nav>
 
       {/* Bottom Navbar */}
-      <nav className="bg-gray-300 dark:bg-gray-700 py-3">
+      <nav className="bg-gray-200 dark:bg-gray-700 py-3">
         <div className="w-fit px-4 mx-auto">
           <ul className="flex justify-center space-x-6 text-xs md:text-sm font-medium">
             <li>
