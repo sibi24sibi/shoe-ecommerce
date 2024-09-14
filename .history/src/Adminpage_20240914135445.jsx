@@ -129,7 +129,7 @@ function AddProductForm() {
             Upload Image
           </label>
           <div
-            className="relative border-2 border-dashed border-gray-300 rounded-md p-4 dark:bg-gray-500 bg-gray-50"
+            className="relative border-2 border-dashed border-gray-300 rounded-md p-4 dark:bg-gray-800 bg-gray-50"
             onDragOver={(e) => e.preventDefault()} // Prevent default behavior
             onDrop={(e) => handleImageDrop(e)}
           >
