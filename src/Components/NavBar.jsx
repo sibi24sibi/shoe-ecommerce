@@ -44,7 +44,7 @@ function NavBar() {
           >
             <img src={assets.Logo} className="h-8" alt="Shop Logo" />
             <span className="self-center text-xs/[0.2555rem] nerko-one-regular uppercase md:text-2xl    md:font-semibold  font-normal whitespace-nowrap dark:text-white">
-              Nivakush Footware
+              Frontwear Footware
             </span>
           </a>
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
