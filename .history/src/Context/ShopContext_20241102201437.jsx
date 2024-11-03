@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import axios from "axios";
+import axios from "axios"; // Make sure to import axios
 import { toast } from "react-toastify";
 
 export const ShopContext = createContext();
@@ -15,7 +15,7 @@ const ShopContextProvider = (props) => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
-
+  // Fetch products data
   useEffect(() => {
     const fetchData = async () => {
       const apiUrl = "https://shoes-collections.p.rapidapi.com/shoes/";
@@ -27,18 +27,16 @@ const ShopContextProvider = (props) => {
           },
         });
 
-        setProducts(response.data); 
-        localStorage.setItem("products", JSON.stringify(response.data));
-        
-        console.log(products)
-        
+        setProducts(response.data); // Set the fetched products to state
+        localStorage.setItem("products", JSON.stringify(response.data)); 
+        console.table(products)
       } catch (e) {
         console.error('Error while fetching data:', e);
       }
     };
 
-    fetchData(); 
-  }, []); 
+    fetchData(); // Call the fetchData function
+  }, []); // Run once when the component mounts
 
   const addToCart = (itemId, size) => {
     if (!size) {

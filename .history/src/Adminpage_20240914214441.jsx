@@ -111,6 +111,7 @@ function AddProductForm() {
                   id={`size_${size}`}
                   value={size}
                   onChange={handleSizeChange}
+                  required
                   className="mr-2 text-blue-600 dark:bg-gray-800 dark:border-gray-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
                 />
                 <label

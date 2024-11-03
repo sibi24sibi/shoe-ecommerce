@@ -16,8 +16,7 @@ function PaginationProdGrid() {
             <Link key={item.id } >
               <Products
                 name={item.name}
-                image={item.image}
-                price={item.price}
+               
               />
             </Link>
           ))

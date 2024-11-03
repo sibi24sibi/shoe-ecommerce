@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 function PaginationProdGrid() {
   const { products } = useContext(ShopContext);
-  
+
+  console.log(products)
 
   return (
     <>
@@ -16,8 +17,7 @@ function PaginationProdGrid() {
             <Link key={item.id } >
               <Products
                 name={item.name}
-                image={item.image}
-                price={item.price}
+               
               />
             </Link>
           ))

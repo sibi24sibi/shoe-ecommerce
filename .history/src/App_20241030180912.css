@@ -51,8 +51,8 @@
   animation: storm1261 1.2s ease-in-out both; /* Medium speed */
   animation-delay: 0.06s;
 }
-
-/* @keyframes rotate624 {
+/* 
+@keyframes rotate624 {
   0% {
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
@@ -94,7 +94,7 @@
   100% {
     transform: translate3d(0, 0, 0) translateZ(0);
   }
-} */
+}
 
 .btn-shine {
   border: 1px solid;
@@ -104,7 +104,7 @@
 
 .btn-shine span {
   z-index: 70;
-}
+} */
 
 .btn-shine:after {
   background: #38ef7d;

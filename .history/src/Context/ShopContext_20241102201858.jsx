@@ -28,9 +28,7 @@ const ShopContextProvider = (props) => {
         });
 
         setProducts(response.data); 
-        localStorage.setItem("products", JSON.stringify(response.data));
-        
-        console.log(products)
+        localStorage.setItem("products", JSON.stringify(response.data)); 
         
       } catch (e) {
         console.error('Error while fetching data:', e);
