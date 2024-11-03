@@ -83,6 +83,14 @@ const ShopContextProvider = (props) => {
     }
   };
 
+
+  const clearCart = () => {
+    setCartItems({});
+    
+  };
+
+  
+
   const getCartCount = () => {
     let totalCount = 0;
     for (const item in cartItems) {
@@ -104,6 +112,7 @@ const ShopContextProvider = (props) => {
         decrementQuantity,
         deleteItem,
         getCartCount,
+        clearCart
       }}
     >
       {props.children}

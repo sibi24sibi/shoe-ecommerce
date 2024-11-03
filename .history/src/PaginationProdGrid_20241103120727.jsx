@@ -68,4 +68,3 @@ function PaginationProdGrid() {
 }
 
 export default PaginationProdGrid;
-

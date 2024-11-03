@@ -38,15 +38,15 @@ function NavBar() {
       {/* Top Navbar */}
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl p-4">
-          <a
-            href="#"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <img src={assets.Logo} className="h-8" alt="Shop Logo" />
+          <NavLink
+            to="/login"
+            className=' flex'>
+            <img src={assets.Logo} className="h-8 mx-4" alt="Shop Logo" />
             <span className="self-center text-xs/[0.2555rem] nerko-one-regular uppercase md:text-2xl    md:font-semibold  font-normal whitespace-nowrap dark:text-white">
               Frontwear Footware
             </span>
-          </a>
+          </NavLink>
+
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
             {/* Search Bar */}
             <div className="relative hidden sm:block">
@@ -77,16 +77,15 @@ function NavBar() {
               className="relative inline-flex items-center  text-base md:text-lg p-1 bg-blue-200 dark:bg-blue-500 rounded-full md:w-12 md:h-6 w-10   h-6 transition-colors duration-300 focus:outline-none shadow-md"
             >
               <span
-                className={`absolute inline-block md:w-4 md:h-4 w-4 h-4  bg-blue-400 dark:bg-blue-200 rounded-full transition-transform transform ${
-                  darkTheme
+                className={`absolute inline-block md:w-4 md:h-4 w-4 h-4  bg-blue-400 dark:bg-blue-200 rounded-full transition-transform transform ${darkTheme
                     ? "translate-x-4 md:translate-x-6"
                     : "translate-x-0 md:translate-x-1"
-                }`}
+                  }`}
               />
               <span className="sr-only">Toggle Theme</span>
             </button>
 
-            <NavLink
+            {/* <NavLink
               to="/login "
               className="text-sm text-gray-500   md:text-lg dark:text-white hover:underline"
             >
@@ -102,7 +101,7 @@ function NavBar() {
                 <span className="top-0 left-6 absolute animate-ping   w-2.5 h-2.5 bg-green-400 border-2 border-white dark:border-gray-800  block md:hidden rounded-full"></span>
                 <span className="top-0 left-6 absolute animate-ping  w-3 h-3 bg-green-400 border-2 border-white dark:border-gray-800  hidden md:block rounded-full"></span>
               </div>
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
       </nav>

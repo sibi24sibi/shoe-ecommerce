@@ -28,12 +28,12 @@
   background-image: url('./assets/surface-with-decorative-shoes-blank-space_23-2147630308.png');
   background-size: cover;
   background-position: center;
-
 }
+/* 
 
 .btn-shine {
   z-index: 0;
-  transition: all 1.2s cubic-bezier(0.02, 0.01, 0.47, 1); /* Medium speed */
+  transition: all 1.2s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 
 .btn-shine span {
@@ -44,11 +44,11 @@
 }
 
 .btn-shine:hover {
-  animation: rotate624 1.2s ease-in-out both; /* Medium speed */
+  animation: rotate624 1.2s ease-in-out both;
 }
 
 .btn-shine:hover span {
-  animation: storm1261 1.2s ease-in-out both; /* Medium speed */
+  animation: storm1261 1.2s ease-in-out both; 
   animation-delay: 0.06s;
 }
 
@@ -115,14 +115,14 @@
   position: absolute;
   top: -175px;
   transform: rotate(35deg);
-  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1); /* Medium speed */
+  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
   width: 150px;
   z-index: 10;
 }
 
 .btn-shine:hover:after {
   left: 170%;
-  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1); /* Medium speed */
+  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 
@@ -140,7 +140,7 @@
   }
   
 
-  /* Tailwind styles */
+
 .Btn {
   display: flex;
   align-items: center;
@@ -154,7 +154,7 @@
   overflow: hidden;
   transition-duration: .3s;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
-  background-color: rgb(65, 165, 255); /* You can customize this color for your design */
+  background-color: rgb(65, 165, 255);
 }
 
 .sign {
@@ -197,4 +197,4 @@
 
 .Btn:active {
   transform: translate(2px, 2px);
-}
+} */
