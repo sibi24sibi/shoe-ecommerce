@@ -50,7 +50,7 @@ function PaginationProdGrid() {
           ))
         ) : (
           // Show this message if products are loaded but empty
-          <p className="flex justify-center w-full text-center items-center h-60 col-span-3">No products available</p>
+          <p className="flex justify-center w-full text-center items-center h-60">No products available</p>
         )}
       </div>
 
