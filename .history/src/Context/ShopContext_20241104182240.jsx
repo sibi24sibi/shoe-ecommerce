@@ -30,7 +30,7 @@ const ShopContextProvider = (props) => {
         setProducts(response.data); 
         localStorage.setItem("products", JSON.stringify(response.data));
         
-    
+        console.log(products)
         
       } catch (e) {
         console.error('Error while fetching data:', e);
@@ -39,7 +39,7 @@ const ShopContextProvider = (props) => {
 
     fetchData(); 
 
-   
+    console.log(products)
   }, []); 
 
   const addToCart = (itemId, size) => {
@@ -106,13 +106,6 @@ const ShopContextProvider = (props) => {
     }
   };
 
-
-  const clearCart = () => {
-    setCartItems({});
-    
-  };
-
-
   const getCartCount = () => {
     let totalCount = 0;
     for (const item in cartItems) {
@@ -134,7 +127,6 @@ const ShopContextProvider = (props) => {
         decrementQuantity,
         deleteItem,
         getCartCount,
-        clearCart
       }}
     >
       {props.children}

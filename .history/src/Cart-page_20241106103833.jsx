@@ -51,7 +51,7 @@ function Cartpage() {
   // Handle proceed to checkout with cart validation
   const handleProceedToPay = () => {
     if (Object.keys(cartItems).length === 0) {
-      toast.info('Your Cart is Empty')
+      toast.info('dd')
       return; // Do nothing if cart is empty
     }
     navigate("/payment");

@@ -1,12 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ShopContext } from "./Context/ShopContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faShoePrints,
-  faTrashAlt,
-  faPlus,
-  faMinus,
-} from "@fortawesome/free-solid-svg-icons";
+import { faShoePrints, faTrashAlt, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -17,20 +12,22 @@ function Cartpage() {
     incrementQuantity,
     decrementQuantity,
     deleteItem,
-    clearCart, // Assuming you have a clearCart function in your context
+    getCartCount,
+    clearCart, // Assuming clearCart function is defined in ShopContext to empty the cart
   } = useContext(ShopContext);
-
+  
   const navigate = useNavigate();
-  const packageFees = 50;
-  const [showClearModal, setShowClearModal] = useState(false);
+  const packageFees = 50;  // Flat package fee
 
-  // Function to calculate total amount
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Calculate the total cost of items in the cart
   const calculateTotal = () => {
     let total = 0;
     for (const itemId in cartItems) {
       for (const size in cartItems[itemId]) {
         const product = products.find(
-          (product) => product.id === parseInt(itemId, 10) // Correctly matching the product
+          (product) => product._id === parseInt(itemId, 10)
         );
         if (product) {
           total += cartItems[itemId][size] * product.price;
@@ -39,47 +36,59 @@ function Cartpage() {
         }
       }
     }
-    return total + packageFees;
+    return total + packageFees;  // Add package fees to total
   };
 
-  // Handle clearing the cart after confirmation
-  const handleClearCart = () => {
-    clearCart(); // This would be a function in your ShopContext that clears the cart
-    setShowClearModal(false); // Close the modal
-  };
-
-  // Handle proceed to checkout with cart validation
+  // Proceed to payment page
   const handleProceedToPay = () => {
     if (Object.keys(cartItems).length === 0) {
-      toast.info('Your Cart is Empty')
-      return; // Do nothing if cart is empty
+      toast.warn("Your cart is empty. Add items before proceeding.");
+      return;
     }
     navigate("/payment");
   };
 
+  // Handle clearing of the cart
+  const handleClearCart = () => {
+    clearCart();
+    toast.info("Cart has been cleared");
+    setIsModalOpen(false);
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
       <section className="container md:mx-auto py-8 px-4">
-        <div className="flex md:flex-row flex-col gap-4 justify-center">
+        <div className="flex flex-col md:flex-row gap-6 justify-center">
+          {/* Left Side: Cart Items */}
           <div className="w-full lg:w-2/3">
             <div className="bg-white dark:bg-slate-700 shadow-lg rounded-lg">
               <div className="p-6">
                 <div className="flex justify-between items-center mb-4">
                   <h5 className="text-lg font-semibold">
-                    <a href="#!" className="text-gray-600 dark:text-gray-200 flex items-center">
-                      Shopping Cart
-                    </a>
+                    Shopping Cart
                   </h5>
                   <p className="text-gray-600 dark:text-gray-200">
-                    You have {Object.keys(cartItems).length} items in your cart
+                    You have {getCartCount()} item{getCartCount() !== 1 && "s"} in your cart
                   </p>
                 </div>
                 <hr className="mb-6" />
+                
+                {/* Clear All Button */}
+                <div className="flex justify-end mb-4">
+                  <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="text-red-700 border border-red-700 py-2 px-4 rounded-md flex items-center bg-transparent hover:bg-red-700 hover:text-white transition duration-200 ease-in-out"
+                  >
+                    <FontAwesomeIcon icon={faTrashAlt} />
+                    <span className="ml-2">Clear All</span>
+                  </button>
+                </div>
 
+                {/* Cart Items List */}
                 {Object.keys(cartItems).length > 0 ? (
                   Object.keys(cartItems).map((itemId) => {
                     const product = products.find(
-                      (product) => product.id === parseInt(itemId, 10) // Use `id` to match product correctly
+                      (product) => product._id === parseInt(itemId, 10)
                     );
                     if (!product) return null;
 
@@ -89,7 +98,7 @@ function Cartpage() {
                         className="flex items-center mb-4 p-4 border-b text-gray-900 dark:text-gray-200 border-gray-300"
                       >
                         <img
-                          src={product.image} // Use the product image here
+                          src={product.image}
                           alt={product.name}
                           className="w-16 h-16 object-cover rounded-md mr-4"
                         />
@@ -132,7 +141,9 @@ function Cartpage() {
                   })
                 ) : (
                   <div className="text-center text-gray-600 dark:text-gray-200 py-16">
-                    <h4 className="text-2xl font-medium mb-4">Your Cart is Empty</h4>
+                    <h4 className="text-2xl font-medium mb-4">
+                      Your Cart is Empty
+                    </h4>
                     <FontAwesomeIcon icon={faShoePrints} className="text-6xl text-gray-400" />
                   </div>
                 )}
@@ -140,7 +151,7 @@ function Cartpage() {
             </div>
           </div>
 
-          {/* Order Summary */}
+          {/* Right Side: Order Summary */}
           <div className="w-full lg:w-1/3 lg:ml-4">
             <div className="dark:bg-blue-600 bg-blue-200 text-black dark:text-white rounded-lg shadow-lg">
               <div className="p-6">
@@ -163,37 +174,30 @@ function Cartpage() {
                 >
                   Proceed to Checkout
                 </button>
-                <button
-                  onClick={() => setShowClearModal(true)}
-                  className="w-full mt-4 bg-gradient-to-r from-red-500 to-red-600 text-white py-3 px-6 rounded-lg shadow-md  hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
-                >
-                  Clear All Cart
-                </button>
-
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Confirmation Modal for Clear All Cart */}
-      {showClearModal && (
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
-            <h3 className="text-lg font-semibold mb-4">Are you sure?</h3>
-            <p className="mb-4">Do you want to clear all items in your cart?</p>
-            <div className="flex justify-between">
-              <button
-                onClick={() => setShowClearModal(false)}
-                className="bg-gray-300 px-4 py-2 rounded-md text-black hover:bg-gray-400"
-              >
-                Cancel
-              </button>
+      {/* Confirmation Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-md shadow-md text-center">
+            <h3 className="text-lg font-semibold mb-4">Clear All Items</h3>
+            <p className="mb-4">Are you sure you want to remove all items from your cart?</p>
+            <div className="flex justify-center space-x-4">
               <button
                 onClick={handleClearCart}
-                className="bg-red-600 px-4 py-2 rounded-md text-white hover:bg-red-700"
+                className="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-500"
               >
-                Clear Cart
+                Yes, Clear All
+              </button>
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="bg-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-400"
+              >
+                Cancel
               </button>
             </div>
           </div>

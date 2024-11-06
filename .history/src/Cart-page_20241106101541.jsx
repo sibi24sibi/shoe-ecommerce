@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { ShopContext } from "./Context/ShopContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,7 +8,6 @@ import {
   faMinus,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 
 function Cartpage() {
   const {
@@ -17,12 +16,10 @@ function Cartpage() {
     incrementQuantity,
     decrementQuantity,
     deleteItem,
-    clearCart, // Assuming you have a clearCart function in your context
   } = useContext(ShopContext);
 
   const navigate = useNavigate();
   const packageFees = 50;
-  const [showClearModal, setShowClearModal] = useState(false);
 
   // Function to calculate total amount
   const calculateTotal = () => {
@@ -42,18 +39,7 @@ function Cartpage() {
     return total + packageFees;
   };
 
-  // Handle clearing the cart after confirmation
-  const handleClearCart = () => {
-    clearCart(); // This would be a function in your ShopContext that clears the cart
-    setShowClearModal(false); // Close the modal
-  };
-
-  // Handle proceed to checkout with cart validation
   const handleProceedToPay = () => {
-    if (Object.keys(cartItems).length === 0) {
-      toast.info('Your Cart is Empty')
-      return; // Do nothing if cart is empty
-    }
     navigate("/payment");
   };
 
@@ -163,42 +149,11 @@ function Cartpage() {
                 >
                   Proceed to Checkout
                 </button>
-                <button
-                  onClick={() => setShowClearModal(true)}
-                  className="w-full mt-4 bg-gradient-to-r from-red-500 to-red-600 text-white py-3 px-6 rounded-lg shadow-md  hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
-                >
-                  Clear All Cart
-                </button>
-
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Confirmation Modal for Clear All Cart */}
-      {showClearModal && (
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
-            <h3 className="text-lg font-semibold mb-4">Are you sure?</h3>
-            <p className="mb-4">Do you want to clear all items in your cart?</p>
-            <div className="flex justify-between">
-              <button
-                onClick={() => setShowClearModal(false)}
-                className="bg-gray-300 px-4 py-2 rounded-md text-black hover:bg-gray-400"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handleClearCart}
-                className="bg-red-600 px-4 py-2 rounded-md text-white hover:bg-red-700"
-              >
-                Clear Cart
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

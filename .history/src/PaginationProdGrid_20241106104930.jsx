@@ -42,7 +42,6 @@ function PaginationProdGrid() {
       </div>
 
       {/* Pagination Controls */}
-
       <div className="flex justify-center">
   <ReactPaginate
     previousLabel={"Previous"}
@@ -55,19 +54,18 @@ function PaginationProdGrid() {
     onPageChange={handlePageChange}
     containerClassName={"pagination flex items-center p-5"}
     pageClassName={
-      "px-4 py-2 dark:text-white rounded-md mx-1 cursor-pointer transition-colors duration-200 hover:bg-blue-500 hover:text-white dark:hover:bg-blue-400 dark:hover:text-white"
+      "px-4 py-2 rounded-md mx-1 cursor-pointer transition-colors duration-200 hover:bg-blue-500 hover:text-white dark:hover:bg-blue-400 dark:hover:text-white"
     }
     previousClassName={
-      "px-4 py-2 dark:text-white rounded-md mx-1 cursor-pointer transition-colors duration-200 hover:bg-blue-500 hover:text-white dark:hover:bg-blue-400 dark:hover:text-white"
+      "px-4 py-2 rounded-md mx-1 cursor-pointer transition-colors duration-200 hover:bg-blue-500 hover:text-white dark:hover:bg-blue-400 dark:hover:text-white"
     }
     nextClassName={
-      "px-4 py-2 dark:text-white rounded-md mx-1 cursor-pointer transition-colors duration-200 hover:bg-blue-500 hover:text-white dark:hover:bg-blue-400 dark:hover:text-white"
+      "px-4 py-2 rounded-md mx-1 cursor-pointer transition-colors duration-200 hover:bg-blue-500 hover:text-white dark:hover:bg-blue-400 dark:hover:text-white"
     }
     activeClassName={"bg-blue-500 text-white dark:bg-blue-400 dark:text-white"}
-    disabledClassName={"opacity-50 cursor-not-allowed dark:text-white"}
+    disabledClassName={"opacity-50 cursor-not-allowed"}
   />
 </div>
-
 
     </>
   );

@@ -8,7 +8,6 @@ import {
   faMinus,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 
 function Cartpage() {
   const {
@@ -51,7 +50,7 @@ function Cartpage() {
   // Handle proceed to checkout with cart validation
   const handleProceedToPay = () => {
     if (Object.keys(cartItems).length === 0) {
-      toast.info('Your Cart is Empty')
+      alert("Your cart is empty. Please add items to proceed.");
       return; // Do nothing if cart is empty
     }
     navigate("/payment");
@@ -165,11 +164,10 @@ function Cartpage() {
                 </button>
                 <button
                   onClick={() => setShowClearModal(true)}
-                  className="w-full mt-4 bg-gradient-to-r from-red-500 to-red-600 text-white py-3 px-6 rounded-lg shadow-md  hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
+                  className="w-full mt-4 text-red-600 py-3 rounded-md hover:bg-red-300"
                 >
                   Clear All Cart
                 </button>
-
               </div>
             </div>
           </div>
@@ -183,18 +181,13 @@ function Cartpage() {
             <h3 className="text-lg font-semibold mb-4">Are you sure?</h3>
             <p className="mb-4">Do you want to clear all items in your cart?</p>
             <div className="flex justify-between">
-              <button
-                onClick={() => setShowClearModal(false)}
-                className="bg-gray-300 px-4 py-2 rounded-md text-black hover:bg-gray-400"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handleClearCart}
-                className="bg-red-600 px-4 py-2 rounded-md text-white hover:bg-red-700"
-              >
-                Clear Cart
-              </button>
+       
+<button
+  onClick={() => setShowClearModal(true)}
+  className="w-full mt-4 bg-gradient-to-r from-red-500 to-red-600 text-white py-4 px-6 rounded-xl shadow-lg transform transition-transform hover:scale-105 hover:from-red-400 hover:to-red-500"
+>
+  Clear All Cart
+</button>
             </div>
           </div>
         </div>

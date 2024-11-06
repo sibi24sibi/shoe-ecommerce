@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Products({ name, image, price, id }) {
   return (
-    <div className="w-full h-full max-w-sm btn-shine transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:dark:bg-gray-800 hover:dark:border-gray-700">
+    <div className="w-full max-h-64 max-w-sm btn-shine transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:dark:bg-gray-800 hover:dark:border-gray-700">
       <Link to={`/productInfo/${id}`}>
         <img
           className="p-8 rounded-t-lg transition-transform duration-300 transform hover:scale-105"

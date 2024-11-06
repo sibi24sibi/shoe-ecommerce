@@ -20,36 +20,7 @@ function ProductInfo() {
     fetchProductData();
   }, [productInfoId, products]);
 
-  if (!productShoesData) {
-    return (
-      <div className="text-gray-900 dark:text-gray-100">
-        <div className="text-center">
-          <div role="status">
-            <svg
-              aria-hidden="true"
-              className="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
-              viewBox="0 0 100 101"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908Z"
-                fill="currentColor"
-              />
-              <path
-                d="M93.8 50.5908C93.8 77.2466 77.2466 93.8 50.5908 93.8C23.935 93.8 7.38086 77.2466 7.38086 50.5908C7.38086 23.935 23.935 7.38086 50.5908 7.38086C77.2466 7.38086 93.8 23.935 93.8 50.5908Z"
-                stroke="currentColor"
-                strokeWidth="5"
-              />
-            </svg>
-            <span className="sr-only">Loading...</span>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
+  return productShoesData ? (
     <div className="flex md:flex-row flex-col bg-white dark:bg-slate-950 transition duration-300">
       {/* Product Image */}
       <div className="md:w-1/2">
@@ -153,7 +124,16 @@ function ProductInfo() {
         </div>
       </div>
     </div>
-  );
-}
-
-export default ProductInfo;
+  ) : (
+    <div className="text-gray-900 dark:text-gray-100">
+      <div className="text-center">
+        <div role="status">
+          <svg
+            aria-hidden="true"
+            className="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+            viewBox="0 0 100 101"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 2

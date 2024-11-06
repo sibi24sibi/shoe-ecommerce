@@ -10,8 +10,26 @@ function Payment() {
   const [email, setEmail] = useState("");
   const [paymentSuccess, setPaymentSuccess] = useState(false);
 
-  const { clearCart } = useContext(ShopContext);
+  const { clearCart, cartItems, products } = useContext(ShopContext);
   const navigate = useNavigate();
+  const packageFees = 50;
+
+  const calculateTotal = () => {
+    let total = 0;
+    for (const itemId in cartItems) {
+      for (const size in cartItems[itemId]) {
+        const product = products.find(
+          (product) => product._id === parseInt(itemId, 10)
+        );
+        if (product) {
+          total += cartItems[itemId][size] * product.price;
+        } else {
+          console.warn(`Product with ID ${itemId} not found`);
+        }
+      }
+    }
+    return total + packageFees;
+  };
 
   const handlePaymentSubmit = (e) => {
     e.preventDefault();
@@ -24,18 +42,23 @@ function Payment() {
     navigate(-1);
   };
 
+  const handleProceedToPay = () => {
+    toast.info("Proceeding to checkout...");
+    // Add any further logic for the checkout process here
+  };
+
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100 dark:bg-gray-900">
-      <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl ">Payment</h2>
+      <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Payment</h2>
 
-      <div className="mt-6 w-full max-w-lg">
+      <div className="mt-6 w-full max-w-7xl">
         <form
           className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6 lg:p-8"
           onSubmit={handlePaymentSubmit}
         >
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2"> {/* Use md:grid-cols-2 for responsive layout */}
-            {/* Left Side */}
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Left Side: Payment Form */}
+            <div className="space-y-6">
               <div className="mb-4">
                 <label htmlFor="full_name" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
                   Full name (as displayed on card)*
@@ -81,11 +104,21 @@ function Payment() {
                 />
               </div>
 
-          
-            </div>
+              <div className="mb-4">
+                <label htmlFor="location" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
+                  Address*
+                </label>
+                <textarea
+                  id="location"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-green-500 focus:ring-green-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400"
+                  placeholder="Enter your address"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                  required
+                />
+              </div>
 
-            {/* Right Side */}
-            <div>
+              {/* Payment Details */}
               <div className="mb-4">
                 <label htmlFor="card-number-input" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
                   Card number*
@@ -126,43 +159,34 @@ function Payment() {
                 />
               </div>
             </div>
-          </div>
-          <div className="mb-4 col-span-2">
-                <label htmlFor="location" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
-                  Address*
-                </label>
-                <textarea
-                  id="location"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-green-500 focus:ring-green-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400"
-                  placeholder="Enter your address"
-                  value={location}
-                  onChange={(e) => setLocation(e.target.value)}
-                  required
-                />
+
+            {/* Order Summary (Right Side) */}
+            <div className="w-full lg:w-1/3 lg:ml-4">
+              <div className="dark:bg-blue-600 bg-blue-200 text-black dark:text-white rounded-lg shadow-lg">
+                <div className="p-6">
+                  <h5 className="text-lg font-semibold mb-4">Order Summary</h5>
+                  <div className="md:text-lg text-base flex justify-between mb-4">
+                    <p>Subtotal:</p>
+                    <p>₹{calculateTotal() - packageFees}</p>
+                  </div>
+                  <div className="md:text-lg text-base flex justify-between mb-4">
+                    <p>Package Fees:</p>
+                    <p>₹{packageFees}</p>
+                  </div>
+                  <div className="md:text-lg text-base flex justify-between mb-6">
+                    <p className="font-semibold">Total (Incl. Taxes):</p>
+                    <p className="font-semibold">₹{calculateTotal()}</p>
+                  </div>
+                  <button
+                    onClick={handleProceedToPay}
+                    className="w-full bg-green-600 dark:bg-green-300 dark:text-black text-white py-3 rounded-md hover:bg-green-500"
+                  >
+                    Proceed to Checkout
+                  </button>
+                </div>
               </div>
-
-          {/* Buttons */}
-          <div className="grid grid-cols-2 gap-4 mt-6">
-            <button
-              type="submit"
-              className="col-span-2 bg-green-600 text-white py-3 rounded-md hover:bg-green-500 transition duration-200 ease-in-out"
-            >
-              Place Order
-            </button>
-            <button
-              type="button"
-              onClick={handleBack}
-              className="col-span-2 bg-gray-600 text-white py-2 rounded-md hover:bg-gray-500 transition duration-200 ease-in-out"
-            >
-              Back
-            </button>
-          </div>
-
-          {paymentSuccess && (
-            <div className="text-center mt-6 text-green-600 dark:text-green-400">
-              Order Placed
             </div>
-          )}
+          </div>
         </form>
       </div>
     </div>
